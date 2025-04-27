@@ -1,0 +1,95 @@
+/* Navbar content - Positioning it at the top and centering everything */
+.navbar-content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 1rem;
+    text-align: center;
+    z-index: 10; /* Ensure it's on top of everything else */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items vertically */
+  }
+  
+  .navbar-content img {
+    width: 100px; /* Adjust logo size as needed */
+    margin-bottom: 1rem; /* Space between logo and links */
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: rgba(211, 69, 169, 0.8); /* Hover effect */
+  }
+  
+
+  /* Styling for the div */
+.carousel-text {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    width: 600px;
+    height: 200px;
+    background-image: url('path_to_your_image.jpg');  /* Background image like the image example */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-text h3 {
+    color: white;  /* Text color */
+    font-size: 15px; /* Text size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow to make text stand out */
+    z-index: 2; /* Ensure the text is above the background */
+  }
+  .carousel-text h6 {
+    color: white;  /* Text color */
+    font-size: 15px; /* Text size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow to make text stand out */
+    z-index: 2; /* Ensure the text is above the background */
+  }
+  /* Styling for the span inside the div */
+  .carousel-text p {
+    font-size: 30px; /* Text size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow to make text stand out */
+    z-index: 2; /* Ensure the text is above the background */
+  }
+  .date-number{
+    color: rgb(213, 203, 14);
+  }
+  .date{
+    color: white;
+  }
+  
+
+
+footer{
+    background-image: url(../img/footer.jpg);
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
