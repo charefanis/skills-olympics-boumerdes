@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Skills Olympiade - Wilaya de Boumerdès</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .text {
+        position: absolute;
+        top: 230px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 999;
+    }
+
+    .text div p {
+        color: white;
+        font-weight: 600;
+        font-size: 36px;
+    }
+</style>
+
+<body>
+    <nav class="relative h-[300px] overflow-hidden">
+
+        <div class="bg-container absolute inset-0">
+            <img class="bg-img-nav" src="img/bg-img-2.jpg" alt="Background">
+        </div>
+
+        <!-- Pink Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navbar Content -->
+        <div class="navbar-content">
+            <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <div class="navbar-links">
+                <a href="index.html">Acceuil</a>
+                <a href="specialites.html">Spécialités</a>
+                <a href="inscription.html">Inscription</a>
+                <a href="resultat.html">Résultat</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="text">
+            <div>
+                <p>Inscrivez-vous</p>
+            </div>
+        </div>
+    </nav>
+
+    <!--Formulaire d'inscription-->
+    <!-- Formulaire d'inscription -->
+    <section class="form-section min-h-screen flex items-center justify-center bg-gray-50 py-12">
+        <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-semibold text-center mb-6 text-pink-600">Inscrivez-vous</h2>
+
+            <form action="#" method="POST" enctype="multipart/form-data" class="space-y-5">
+                <!-- Nom -->
+                <div>
+                    <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+                    <input type="text" id="nom" name="nom" required
+                        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none" />
+                </div>
+
+                <!-- Prénom -->
+                <div>
+                    <label for="prenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required
+                        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none" />
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none" />
+                </div>
+
+                <!-- Mot de passe -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
+                    <input type="password" id="password" name="password" required
+                        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none" />
+                </div>
+
+                <!-- Spécialité -->
+                <div>
+                    <label for="specialite" class="block text-sm font-medium text-gray-700">Spécialité</label>
+                    <select id="specialite" name="specialite" required
+                        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                        <option>-- Choisissez une spécialité --</option>
+                        <option>Technologie de fabrication et d’ingénierie</option>
+                        <option>Technologie de l’information et de la communication</option>
+                        <option>Technologie de la construction et du bâtiment</option>
+                        <option>Transport et logistique</option>
+                        <option>Art créatif et mode</option>
+                        <option>Services</option>
+                    </select>
+                </div>
+
+                <!-- Photo -->
+                <div>
+                    <label for="photo" class="block text-sm font-medium text-gray-700">Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required
+                        class="mt-1 w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-pink-600 file:text-white hover:file:bg-pink-700" />
+                </div>
+
+                <!-- Bouton -->
+                <button type="submit"
+                    class="w-full bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition duration-300">
+                    S'inscrire
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <button id="scrollToTop">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+    <!--Footer-->
+    <footer>
+
+        <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+        <p><i class="fa-solid fa-location-dot"></i>DFEP de Boumerdès - Olympiade des métiers 2025</p>
+        <p><i class="fa-solid fa-phone"></i>024 79 72 13</p>
+        <p><i class="fa-solid fa-envelope"></i>contact@skillsolympicsboumerdes.dz</p>
+        <a href="https://skillsolympics.dz"><i class="fa-solid fa-globe"></i>skills olympics dz site web</a>
+        <p><i class="fa-solid fa-star"></i>Croyez en vos compétences, dépassez vos limites</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('scrollToTop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+</body>
+
+</html>
