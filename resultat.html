@@ -11,6 +11,20 @@
     <title>Skills Olympiade - Wilaya de Boumerdès</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .text {
+            position: absolute;
+            top: 230px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 999;
+        }
+
+        .text div p {
+            color: white;
+            font-weight: 600;
+            font-size: 36px;
+        }
+
         input {
             border: 1px solid #000000;
             /* Bordure noire de 2px */
@@ -27,6 +41,36 @@
             border-color: #000;
             /* Garde la bordure noire lors du focus */
         }
+
+        @media(max-width:600px) {
+            .overlay {
+                display: none;
+            }
+
+            .text {
+                position: absolute;
+                top: 180px;
+            }
+
+            .text div p {
+                color: white;
+                font-weight: 600;
+                font-size: 26px;
+            }
+        }
+
+        @media(max-width:400px) {
+            .text {
+                position: absolute;
+                top: 160px;
+            }
+
+            .text div p {
+                color: white;
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
@@ -41,14 +85,42 @@
         <div class="overlay"></div>
 
         <!-- Navbar Content -->
-        <div class="navbar-content">
+        <div class="sidebar-links text-2xl">
             <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <a onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="side-separator"></div>
+            <a href="index.html">Acceuil</a>
+            <div class="side-separator"></div>
+            <a href="specialites.html">Spécialités</a>
+            <div class="side-separator"></div>
+            <a href="inscription.html">Inscription</a>
+            <div class="side-separator"></div>
+            <a href="resultat.html">Résultat</a>
+            <div class="side-separator"></div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="navbar-content">
+            <img class="hide-on-mobile" src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
             <div class="navbar-links">
-                <a href="index.html">Acceuil</a>
-                <a href="specialites.html">Spécialités</a>
-                <a href="inscription.html">Inscription</a>
-                <a href="resultat.html">Résultat</a>
-                <a href="contact.html">Contact</a>
+                <a class="hide-on-mobile" href="index.html">Acceuil</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="specialites.html">Spécialités</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="inscription.html">Inscription</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="resultat.html">Résultat</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="contact.html">Contact</a>
+                <div class="nav-separator"></div>
+                <a class="menu-btn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+
+        <div class="text">
+            <div>
+                <p>Résultats</p>
             </div>
         </div>
     </nav>
@@ -60,10 +132,12 @@
         <div class="text-center mb-6">
             <label for="specialitySelect" class="block text-lg font-medium mb-2">Choisissez une spécialité :</label>
             <select id="specialitySelect" class="px-4 py-2 rounded border">
-                <option value="informatique">Informatique</option>
-                <option value="electronique">Électronique</option>
-                <option value="mecanique">Mécanique</option>
-                <option value="batiment">Bâtiment</option>
+                <option value="fabrication-ingenierie">Technologie de fabrication et d’ingénierie</option>
+                <option value="tic">Technologie de l’information et de la communication</option>
+                <option value="construction-batiment">Technologie de la construction et du bâtiment</option>
+                <option value="transport-logistique">Transport et logistique</option>
+                <option value="art-creatif-mode">Art créatif et mode</option>
+                <option value="services">Services</option>
             </select>
         </div>
 
@@ -188,6 +262,14 @@
             });
         });
 
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'none';
+        }
     </script>
 </body>
 

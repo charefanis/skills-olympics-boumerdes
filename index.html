@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Skills Olympiade - Wilaya de Boumerdès</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -26,17 +27,40 @@
     <!-- Pink Overlay -->
     <div class="overlay"></div>
 
-    <!-- Navbar Content -->
-    <div class="navbar-content">
+    <!-- SIDEBAR (OUTSIDE) -->
+    <div class="sidebar-links text-2xl">
       <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+      <a onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></a>
+      <div class="side-separator"></div>
+      <a href="index.html">Acceuil</a>
+      <div class="side-separator"></div>
+      <a href="specialites.html">Spécialités</a>
+      <div class="side-separator"></div>
+      <a href="inscription.html">Inscription</a>
+      <div class="side-separator"></div>
+      <a href="resultat.html">Résultat</a>
+      <div class="side-separator"></div>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar-content">
+      <img class="hide-on-mobile" src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
       <div class="navbar-links">
-        <a href="index.html">Acceuil</a>
-        <a href="specialites.html">Spécialités</a>
-        <a href="inscription.html">Inscription</a>
-        <a href="resultat.html">Résultat</a>
-        <a href="contact.html">Contact</a>
+        <a class="hide-on-mobile" href="index.html">Acceuil</a>
+        <div class="nav-separator"></div>
+        <a class="hide-on-mobile" href="specialites.html">Spécialités</a>
+        <div class="nav-separator"></div>
+        <a class="hide-on-mobile" href="inscription.html">Inscription</a>
+        <div class="nav-separator"></div>
+        <a class="hide-on-mobile" href="resultat.html">Résultat</a>
+        <div class="nav-separator"></div>
+        <a class="hide-on-mobile" href="contact.html">Contact</a>
+        <div class="nav-separator"></div>
+        <a class="menu-btn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></a>
       </div>
     </div>
+
 
     <div class="carousel-text-container">
       <div class="carousel-text absolute inset-0 flex flex-col items-center justify-center text-white text-2xl z-30">
@@ -66,9 +90,8 @@
       <div class="about-img">
         <a class="play-button" href="https://www.youtube.com/watch?v=2ASAu3DF1wM" target="_blank"><i
             class="fa-solid fa-play"></i></a>
-        <img class="oran" src="img/oran.jpg" alt="oran">
+        <img data-aos="fade-left" data-aos-duration="1500" class="oran" src="img/oran.jpg" alt="oran">
         <img class="scale-loop" src="img/about-pattern.png" alt="pattern">
-
       </div>
       <div class="about-text">
         <p id="p5">Olympiades des métiers 2025</p>
@@ -102,39 +125,61 @@
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/usinage.webp" alt="Spécialité 1" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Technologie de fabrication et d’ingénierie</h3>
-      </div>
 
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/developpeur-web.webp" alt="Spécialité 2" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Technologie de l’information et de la communication</h3>
-      </div>
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/usinage.webp" alt="Spécialité 1" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Technologie de fabrication et d’ingénierie</h3>
+        </div>
+      </a>
 
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/Plomberie.webp" alt="Spécialité 3" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Technologie de la construction et du bâtiment</h3>
-      </div>
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/developpeur-web.webp" alt="Spécialité 2" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Technologie de l’information et de la communication</h3>
+        </div>
+      </a>
 
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/Transport.webp" alt="Spécialité 4" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Transport et logistique</h3>
-      </div>
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/Plomberie.webp" alt="Spécialité 3" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Technologie de la construction et du bâtiment</h3>
+        </div>
+      </a>
 
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/art.webp" alt="Spécialité 5" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Art créatif et mode</h3>
-      </div>
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 mb-10">
-        <img src="img/coiffeur.webp" alt="Spécialité 6" class="rounded-xl mb-4 w-full h-60 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Services</h3>
-      </div>
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/Transport.webp" alt="Spécialité 4" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Transport et logistique</h3>
+        </div>
+      </a>
+
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/art.webp" alt="Spécialité 5" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Art créatif et mode</h3>
+        </div>
+      </a>
+
+      <a href="specialites.html">
+        <div
+          class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)] mb-10">
+          <img src="img/coiffeur.webp" alt="Spécialité 6" class="rounded-xl mb-4 w-full h-60 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Services</h3>
+        </div>
+      </a>
+
     </div>
+
   </section>
 
   <section class="login-section">
-    
+
     <div class="login-btn-container">
       <p class="m-8">Procédez à votre inscription pour participer à la compétition.</p>
       <a href="inscription.html" class="m-8 login-button">Inscrivez-vous <i class="fa-solid fa-user"></i></a>
@@ -158,6 +203,10 @@
 
   <!-- JavaScript -->
   <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

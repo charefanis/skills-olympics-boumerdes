@@ -41,10 +41,41 @@
             position: relative;
 
         }
-        .information{
+
+        .information {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        @media(max-width:600px) {
+            .overlay {
+                display: none;
+            }
+
+            .text {
+                position: absolute;
+                top: 180px;
+            }
+
+            .text div p {
+                color: white;
+                font-weight: 600;
+                font-size: 26px;
+            }
+        }
+
+        @media(max-width:400px) {
+            .text {
+                position: absolute;
+                top: 160px;
+            }
+
+            .text div p {
+                color: white;
+                font-weight: 600;
+                font-size: 22px;
+            }
         }
     </style>
 </head>
@@ -60,14 +91,36 @@
         <div class="overlay"></div>
 
         <!-- Navbar Content -->
-        <div class="navbar-content">
+        <div class="sidebar-links text-2xl">
             <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <a onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="side-separator"></div>
+            <a href="index.html">Acceuil</a>
+            <div class="side-separator"></div>
+            <a href="specialites.html">Spécialités</a>
+            <div class="side-separator"></div>
+            <a href="inscription.html">Inscription</a>
+            <div class="side-separator"></div>
+            <a href="resultat.html">Résultat</a>
+            <div class="side-separator"></div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="navbar-content">
+            <img class="hide-on-mobile" src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
             <div class="navbar-links">
-                <a href="index.html">Acceuil</a>
-                <a href="specialites.html">Spécialités</a>
-                <a href="inscription.html">Inscription</a>
-                <a href="resultat.html">Résultat</a>
-                <a href="contact.html">Contact</a>
+                <a class="hide-on-mobile" href="index.html">Acceuil</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="specialites.html">Spécialités</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="inscription.html">Inscription</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="resultat.html">Résultat</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="contact.html">Contact</a>
+                <div class="nav-separator"></div>
+                <a class="menu-btn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></a>
             </div>
         </div>
         <div class="text">
@@ -84,67 +137,67 @@
     </section>
 -->
     <!-- Section Infos + Formulaire + Carte -->
-<section class="flex flex-col items-center justify-center px-4">
+    <section class="flex flex-col items-center justify-center px-4">
 
-    <!-- Infos + Formulaire -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full mt-12 mb-12">
-        
-        <!-- Infos de contact -->
-        <div class="information bg-white p-8 flex flex-col items-center text-center space-y-6 shadow-lg rounded-xl">
-            <div>
-                <h2 class="text-xl font-bold mb-1">Adresse e-mail</h2>
-                <p class="text-gray-700">contact@skillsolympicsboumerdes.dz</p>
-            </div>
+        <!-- Infos + Formulaire -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full mt-12 mb-12">
 
-            <div>
-                <h2 class="text-xl font-bold mb-3">Numéros de contact</h2>
-                <div class="space-y-2 text-gray-800">
-                    <div class="flex items-center justify-center space-x-2">
-                        <i class="fas fa-phone text-700"></i>
-                        <span>024 79 72 13</span>
+            <!-- Infos de contact -->
+            <div class="information bg-white p-8 flex flex-col items-center text-center space-y-6 shadow-lg rounded-xl">
+                <div>
+                    <h2 class="text-xl font-bold mb-1">Adresse e-mail</h2>
+                    <p class="text-gray-700">contact@skillsolympicsboumerdes.dz</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold mb-3">Numéros de contact</h2>
+                    <div class="space-y-2 text-gray-800">
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-phone text-700"></i>
+                            <span>024 79 72 13</span>
+                        </div>
                     </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold mb-1">Adresse</h2>
+                    <p class="text-gray-700">DFEP de Boumerdès - Olympiade des métiers 2025</p>
                 </div>
             </div>
 
-            <div>
-                <h2 class="text-xl font-bold mb-1">Adresse</h2>
-                <p class="text-gray-700">DFEP de Boumerdès - Olympiade des métiers 2025</p>
-            </div>
+            <!-- Formulaire de contact -->
+            <form class="bg-white p-8 shadow-lg rounded-xl space-y-4">
+                <h2 class="text-xl font-bold text-center mb-4">Envoyer un message</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Votre nom">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Votre email">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Sujet">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea class="w-full border border-gray-300 rounded-lg p-2" rows="4"
+                        placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded-lg">Envoyer</button>
+            </form>
         </div>
 
-        <!-- Formulaire de contact -->
-        <form class="bg-white p-8 shadow-lg rounded-xl space-y-4">
-            <h2 class="text-xl font-bold text-center mb-4">Envoyer un message</h2>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Votre nom">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Votre email">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Sujet">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea class="w-full border border-gray-300 rounded-lg p-2" rows="4"
-                    placeholder="Votre message"></textarea>
-            </div>
-            <button type="submit"
-                class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 rounded-lg">Envoyer</button>
-        </form>
-    </div>
-
-    <!-- Carte -->
-    <div class="w-full max-w-6xl">
-        <iframe class="w-full h-[450px] rounded-3xl my-8"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.4947221532398!2d3.4747494!3d36.75869759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e693e3e3febcf%3A0x8977f7435d9b91e9!2sDirection%20de%20la%20formation%20professionnelle!5e0!3m2!1sfr!2sdz!4v1746019835650!5m2!1sfr!2sdz"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</section>
+        <!-- Carte -->
+        <div class="w-full max-w-6xl">
+            <iframe class="w-full h-[450px] rounded-3xl my-8"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.4947221532398!2d3.4747494!3d36.75869759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e693e3e3febcf%3A0x8977f7435d9b91e9!2sDirection%20de%20la%20formation%20professionnelle!5e0!3m2!1sfr!2sdz!4v1746019835650!5m2!1sfr!2sdz"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
 
 
 
@@ -171,6 +224,14 @@
             });
         });
 
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'none';
+        }
     </script>
 </body>
 

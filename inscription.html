@@ -25,6 +25,36 @@
         font-weight: 600;
         font-size: 36px;
     }
+
+    @media(max-width:600px) {
+        .overlay {
+            display: none;
+        }
+
+        .text {
+            position: absolute;
+            top: 180px;
+        }
+
+        .text div p {
+            color: white;
+            font-weight: 600;
+            font-size: 26px;
+        }
+    }
+
+    @media(max-width:400px) {
+        .text {
+            position: absolute;
+            top: 160px;
+        }
+
+        .text div p {
+            color: white;
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
 </style>
 
 <body>
@@ -38,14 +68,36 @@
         <div class="overlay"></div>
 
         <!-- Navbar Content -->
-        <div class="navbar-content">
+        <div class="sidebar-links text-2xl">
             <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <a onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="side-separator"></div>
+            <a href="index.html">Acceuil</a>
+            <div class="side-separator"></div>
+            <a href="specialites.html">Spécialités</a>
+            <div class="side-separator"></div>
+            <a href="inscription.html">Inscription</a>
+            <div class="side-separator"></div>
+            <a href="resultat.html">Résultat</a>
+            <div class="side-separator"></div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="navbar-content">
+            <img class="hide-on-mobile" src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
             <div class="navbar-links">
-                <a href="index.html">Acceuil</a>
-                <a href="specialites.html">Spécialités</a>
-                <a href="inscription.html">Inscription</a>
-                <a href="resultat.html">Résultat</a>
-                <a href="contact.html">Contact</a>
+                <a class="hide-on-mobile" href="index.html">Acceuil</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="specialites.html">Spécialités</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="inscription.html">Inscription</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="resultat.html">Résultat</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="contact.html">Contact</a>
+                <div class="nav-separator"></div>
+                <a class="menu-btn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></a>
             </div>
         </div>
         <div class="text">
@@ -145,6 +197,14 @@
             });
         });
 
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'none';
+        }
     </script>
 </body>
 

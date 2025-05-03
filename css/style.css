@@ -1,7 +1,3 @@
-nav {
-  position: relative;
-}
-
 /* Carousel container */
 #carousel {
   position: absolute;
@@ -99,7 +95,7 @@ footer {
   left: 15%;
   transform: translateY(-50%);
   width: 400px;
-  z-index: 999;
+  z-index: 9;
 }
 
 .carousel-text {
@@ -140,7 +136,7 @@ footer {
 }
 
 .pattern {
-  z-index: 999;
+  z-index: 9;
   position: absolute;
   bottom: -170px;
 }
@@ -152,6 +148,7 @@ footer {
   position: relative;
   height: 680px;
 }
+
 
 .about-img {
   position: absolute;
@@ -324,21 +321,25 @@ footer {
   left: 250px;
   top: 50px;
 }
-.login-section{
+
+.login-section {
   background-image: url(../img/bg-login.jpg);
-  margin: 0 ;
+  margin: 0;
 }
+
 .login-btn-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.login-btn-container p{
+
+.login-btn-container p {
   font-size: 20px;
   font-weight: 500;
   color: white;
 }
+
 .login-button {
   background-color: rgb(211, 69, 168);
   color: white;
@@ -381,7 +382,7 @@ footer {
   font-size: 50px;
   display: inline-block;
   margin-bottom: 5px;
-  animation: shakePause  2s infinite;
+  animation: shakePause 2s infinite;
 }
 
 @keyframes shakePause {
@@ -414,23 +415,378 @@ footer {
   }
 
 }
+
 #scrollToTop {
   background-color: black;
   color: white;
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  position: fixed; /* Utilise 'fixed' pour que l'élément reste fixe à l'écran */
-  right: 3%; /* Positionne le bouton à 3% de la droite */
-  bottom: 3%; /* Positionne le bouton à 3% du bas */
-  z-index: 9999; /* Garantit que le bouton est au-dessus des autres éléments */
+  position: fixed;
+  /* Utilise 'fixed' pour que l'élément reste fixe à l'écran */
+  right: 3%;
+  /* Positionne le bouton à 3% de la droite */
+  bottom: 3%;
+  /* Positionne le bouton à 3% du bas */
+  z-index: 9999;
+  /* Garantit que le bouton est au-dessus des autres éléments */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px; /* Ajuste la taille de l'icône ou du texte à l'intérieur */
-  cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+  font-size: 22px;
+  /* Ajuste la taille de l'icône ou du texte à l'intérieur */
+  cursor: pointer;
+  /* Change le curseur pour indiquer qu'il est cliquable */
   transition: transform 0.3s ease-in-out;
 }
-#scrollToTop:hover{
+
+#scrollToTop:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1600px) {}
+
+/* Example media query for small screens (mobile-first) */
+@media (max-width: 1700px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pattern {
+    display: none;
+  }
+
+  .navbar-content img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    height: 1300px;
+    margin-top: 100px;
+  }
+
+  .about-text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin-bottom: 50px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+    position: relative;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .about-text #p5 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p6 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p7 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p8 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lieu {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .date {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p9 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p10 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p11 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p12 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p13 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text #p14 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .oran {
+    border-radius: 50%;
+    border: solid 15px blue;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    transition: transform 1s ease;
+  }
+
+  .oran:hover {
+    transform: scale(1.1);
+  }
+
+  .scale-loop {
+    animation: scaleUpDown 6s infinite;
+    z-index: 1;
+  }
+
+  .specialite-section .grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(max-width:786px) {
+
+  .about-section {
+    height: 1600px;
+  }
+
+  .oran {
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+  }
+
+  .about-img {
+    left: 45%;
+    transform: translateX(-50%);
+    width: 500px;
+    top: 0;
+
+  }
+
+  .scale-loop {
+    width: 520px;
+    object-fit: cover;
+  }
+
+  .play-button {
+    width: 85px;
+    height: 85px;
+    border: solid 6px white;
+    font-size: 22px;
+    right: 50px;
+    top: 80px;
+  }
+
+}
+
+@media(max-width:500px) {
+  .about-section {
+    height: 1300px;
+    display: flex;
+  }
+
+  .oran {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .about-img {
+    right: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    top: 0;
+
+  }
+
+  .scale-loop {
+    display: none;
+  }
+
+  .play-button {
+    width: 85px;
+    height: 85px;
+    border: solid 6px white;
+    font-size: 22px;
+    right: 40%;
+    top: 115px;
+  }
+
+}
+
+@media(max-width:1400px) {
+
+  #p1 {
+    position: absolute;
+    left: 0;
+    top: -180px;
+    transform: rotate(0deg);
+    font-size: 30px;
+    color: white;
+  }
+
+}
+
+@media(max-width:450px) {
+  .about-section {
+    height: 1400px;
+    display: flex;
+  }
+}
+
+.sidebar-links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 450px;
+  z-index: 9999;
+  color: white;
+  background: rgba(211, 69, 169, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* When you want it to appear */
+.sidebar-links.active {
+  transform: translateX(0);
+}
+
+.sidebar-links img {
+  padding: 15px;
+}
+
+.sidebar-links a {
+  width: 100%;
+  padding: 15px;
+}
+
+@media(max-width: 900px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .navbar-links .hide-on-mobile {
+    display: none;
+  }
+
+  /* Make sure the navbar container is positioned correctly */
+  .navbar-links {
+    position: relative;
+    /* Add relative positioning if not present */
+  }
+
+  .navbar-content {
+    width: 100%;
+    display: flex;
+    align-items: end;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
+
+@media(max-width:400px) {
+  .sidebar-links {
+    width: 100%;
+  }
 }

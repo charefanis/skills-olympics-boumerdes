@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Skills Olympiade - Wilaya de Boumerdès</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .text {
+        position: absolute;
+        top: 230px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 999;
+    }
+
+    .text div p {
+        color: white;
+        font-weight: 600;
+        font-size: 36px;
+    }
+
+    @media(max-width:600px) {
+        .overlay {
+            display: none;
+        }
+
+        .text {
+            position: absolute;
+            top: 180px;
+        }
+
+        .text div p {
+            color: white;
+            font-weight: 600;
+            font-size: 26px;
+        }
+    }
+
+    @media(max-width:400px) {
+        .text {
+            position: absolute;
+            top: 160px;
+        }
+
+        .text div p {
+            color: white;
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="relative h-[300px] overflow-hidden">
+
+        <div class="bg-container absolute inset-0">
+            <img class="bg-img-nav" src="img/bg-img-2.jpg" alt="Background">
+        </div>
+
+        <!-- Pink Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navbar Content -->
+        <div class="sidebar-links text-2xl">
+            <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <a onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="side-separator"></div>
+            <a href="index.html">Acceuil</a>
+            <div class="side-separator"></div>
+            <a href="specialites.html">Spécialités</a>
+            <div class="side-separator"></div>
+            <a href="inscription.html">Inscription</a>
+            <div class="side-separator"></div>
+            <a href="resultat.html">Résultat</a>
+            <div class="side-separator"></div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="navbar-content">
+            <img class="hide-on-mobile" src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+            <div class="navbar-links">
+                <a class="hide-on-mobile" href="index.html">Acceuil</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="specialites.html">Spécialités</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="inscription.html">Inscription</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="resultat.html">Résultat</a>
+                <div class="nav-separator"></div>
+                <a class="hide-on-mobile" href="contact.html">Contact</a>
+                <div class="nav-separator"></div>
+                <a class="menu-btn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="text">
+            <div>
+                <p>Nos spécialités</p>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Bloc 1 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Technologie de fabrication et d’ingénierie</h3>
+                <p class="text-gray-600 text-sm">Mécanique industrielle</p>
+                <p class="text-gray-600 text-sm">Ingénierie mécanique CAO</p>
+                <p class="text-gray-600 text-sm">Electronique</p>
+            </div>
+
+            <!-- Bloc 2 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Technologie de l’information et de la communication
+                </h3>
+                <p class="text-gray-600 text-sm">Développeur web et mobi</p>
+                <p class="text-gray-600 text-sm">Cloud Computing</p>
+                <p class="text-gray-600 text-sm">Cyber securité</p>
+            </div>
+
+            <!-- Bloc 3 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Technologie de la construction et du bâtiment</h3>
+                <p class="text-gray-600 text-sm">Plomberie et chauffage</p>
+                <p class="text-gray-600 text-sm">Carrelage mural et de sol</p>
+                <p class="text-gray-600 text-sm">Installations électriques</p>
+            </div>
+
+            <!-- Bloc 4 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Transport et logistique</h3>
+                <p class="text-gray-600 text-sm">Carrosserie</p>
+                <p class="text-gray-600 text-sm">Maintenance avionique</p>
+                <p class="text-gray-600 text-sm">Mécanique automobile</p>
+            </div>
+
+            <!-- Bloc 5 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Art créatif et mode</h3>
+                <p class="text-gray-600 text-sm">Bijouterie</p>
+                <p class="text-gray-600 text-sm">Technologie de la mode</p>
+                <p class="text-gray-600 text-sm">Infographie</p>
+            </div>
+
+            <!-- Bloc 6 -->
+            <div
+                class="bg-white rounded-2xl p-6 transition-shadow duration-700 hover:shadow-[0_0_30px_rgba(255,0,0,0.8)]">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Services</h3>
+                <p class="text-gray-600 text-sm">Coiffure</p>
+                <p class="text-gray-600 text-sm">Pâtisserie</p>
+                <p class="text-gray-600 text-sm">Cuisine</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <button id="scrollToTop">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+    <!--Footer-->
+    <footer>
+
+        <img src="img/skills_olympic-boumerdes-logo.png" alt="Logo">
+        <p><i class="fa-solid fa-location-dot"></i>DFEP de Boumerdès - Olympiade des métiers 2025</p>
+        <p><i class="fa-solid fa-phone"></i>024 79 72 13</p>
+        <p><i class="fa-solid fa-envelope"></i>contact@skillsolympicsboumerdes.dz</p>
+        <a href="https://skillsolympics.dz"><i class="fa-solid fa-globe"></i>skills olympics dz site web</a>
+        <p><i class="fa-solid fa-star"></i>Croyez en vos compétences, dépassez vos limites</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('scrollToTop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar-links');
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
