@@ -790,3 +790,16 @@ footer {
     width: 100%;
   }
 }
+.nav-separator{
+  width: 2px;
+  margin-top: 8px;
+  background-color: white;
+  height: 30px;
+  z-index: 9999;
+}
+.side-separator{
+  width: 100%;
+  background-color: white;
+  height: 2px;
+  z-index: 9999;
+}
