@@ -41,3 +41,30 @@ function hideSidebar() {
   sidebar.style.display = 'none';
 }
 
+$(function () {
+  // When the play button is clicked
+  $("#showPopup").click(function (e) {
+    e.stopPropagation();
+    $(".bg").addClass("active"); // Show background
+    $(".popup").show(); // Show the popup
+
+    // Add the iframe dynamically
+    const iframe = $('<iframe>', {
+      src: 'https://www.youtube.com/embed/2ASAu3DF1wM?autoplay=1',
+      allow: 'autoplay; fullscreen',
+      allowfullscreen: true
+    });
+    $(".popup").html(iframe); // Add the iframe inside the popup
+  });
+
+  // Close popup and background when clicking on the background
+  $(".bg").click(function () {
+    $(".bg").removeClass("active"); // Hide background
+    $(".popup").hide().empty(); // Hide popup and remove iframe
+  });
+
+  // Prevent clicking inside popup from closing it
+  $(".popup").click(function (e) {
+    e.stopPropagation();
+  });
+});
